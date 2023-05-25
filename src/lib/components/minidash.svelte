@@ -12,7 +12,7 @@
   </figure>
   <div class="text-center flex flex-col gap-2">
     <h2 class="text-2xl font-bold mt-0 mb-2 p-name">Minidash</h2>
-    <p class="opacity-75 p-note">Minidash description: charts and stuff</p>
+    <p class="opacity-75 p-note">Kulcsindikátorok</p>
     <p class="opacity-75 p-note">
       Last updated on:
       <b>21 March 2023</b>

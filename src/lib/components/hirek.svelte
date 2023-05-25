@@ -8,7 +8,7 @@
   import Head from '$lib/components/head.svelte'
   import Footer from '$lib/components/footer.svelte'
   import Post from '$lib/components/post_card.svelte'
-  import Profile from '$lib/components/index_profile.svelte'
+  import Category from '$lib/components/category.svelte'
   import MiniDash from '$lib/components/minidash.svelte'
 
   let allPosts: Urara.Post[]
@@ -18,7 +18,12 @@
 
   storedTitle.set('')
 
-  $: storedPosts.subscribe(storedPosts => (allPosts = storedPosts.filter(post => !post.flags?.includes('unlisted'))))
+  $: storedPosts.subscribe(
+    storedPosts =>
+      (allPosts = storedPosts
+        .filter(post => !post.flags?.includes('unlisted'))
+        .filter(post => post.slug.slice(1).split('/')[0] != 'rolunk'))
+  )
 
   // $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
   $: storedTags.subscribe(
@@ -36,7 +41,11 @@
   $: if (posts.length > 1) years = [new Date(posts[0].published ?? posts[0].created).getFullYear()]
 
   $: if (tags) {
-    posts = !tags ? allPosts : allPosts.filter(post => tags.every(tag => post.tags?.includes(tag)))
+    posts = !tags
+      ? allPosts
+      : allPosts
+          .filter(post => post.slug.slice(1).split('/')[0] != 'about')
+          .filter(post => tags.every(tag => post.tags?.includes(tag)))
     if (browser && window.location.pathname === '/')
       window.history.replaceState({}, '', tags.length > 0 ? `?tags=${tags.toString()}` : `/`)
   }
@@ -55,8 +64,8 @@
   <div
     in:fly={{ x: 25, duration: 300, delay: 500 }}
     out:fly={{ x: 25, duration: 300 }}
-    class="flex-1 columns-1 w-full max-w-screen-md order-first mx-auto xl:mr-0 xl:ml-8 xl:max-w-md">
-    <Profile />
+    class="flex-1 w-full max-w-screen-md order-first mx-auto xl:mr-0 xl:ml-8 xl:max-w-md">
+    <Category />
     <MiniDash />
   </div>
   <div

@@ -2,20 +2,20 @@ import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app',
+  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'data.csaladen.es/kumoa',
   title: 'Külhoni Magyar Oktatási Adatfelfedező',
   subtitle: 'Nemzetpolitikai Kutatóintézet',
-  lang: 'en-US',
+  lang: 'hu-HU',
   description: 'Powered by SvelteKit/Urara',
   author: {
-    avatar: 'https://data.csaladen.es/npki/suli/img/npki.png',
+    avatar: '/assets/logo/npki.png',
     name: 'Külhoni Magyar Oktatási Adatfelfedező',
     status: '',
     bio: 'Nemzetpolitikai Kutatóintézet'
   },
   themeColor: '#3D4451',
   category: {
-    "highlights": {
+    "hirek": {
       "name": "Hírek",
       "description": "",
       "img": "/assets/logo/v.png"
@@ -25,17 +25,22 @@ export const site: SiteConfig = {
       "description": "",
       "img": "/assets/logo/y.png"
     },
-    "modelling": {
+    "adat": {
       "name": "Adatok",
       "description": "",
       "img": "/assets/logo/r.png"
     },
-    "explorables": {
+    "terkep": {
       "name": "Térképek",
       "description": "This is a very long category description that spans over two lines",
       "img": "/assets/logo/blue-globe.png"
     },
-    "about": {
+    "archivum": {
+      "name": "Archívum",
+      "description": "",
+      "img": "/assets/logo/c.png"
+    },
+    "rolunk": {
       "name": "Rólunk",
       "description": "",
       "img": "/assets/logo/a.png"

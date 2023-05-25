@@ -67,7 +67,7 @@
         <li>
           <span class:font-bold={children.some(({ link }) => link === path)} class="!rounded-btn gap-3">
             <img
-              src={site.category[text.toLowerCase()].img}
+              src={site.category[children[0].link.split('/')[1]].img}
               alt={text.toLowerCase()}
               class="u-photo z-10 w-16 h-8 md:w-8 md:h-8" />
             {text}

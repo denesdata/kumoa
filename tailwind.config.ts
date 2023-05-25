@@ -6,7 +6,15 @@ import daisyui from 'daisyui'
 
 export default {
   content: ['./src/**/*.{html,md,js,svelte,ts}'],
-  theme: { extend: {} },
+  theme: {
+    extend: {
+      colors: {
+        //hungary flag colors
+        primary: '#008000',
+        secondary: '#D00000'
+      }
+    }
+  },
   plugins: [typography, daisyui],
   daisyui: { themes: theme.map(({ name }) => name) }
 }

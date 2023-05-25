@@ -8,8 +8,11 @@
   import Head from '$lib/components/head_static.svelte'
   import Header from '$lib/components/header.svelte'
   import Transition from '$lib/components/transition.svelte'
-  import Highlights from '$lib/components/highlights.svelte'
+  import Hirek from '$lib/components/hirek.svelte'
+  import Terkep from '$lib/components/terkep.svelte'
+  import Adat from '$lib/components/adat.svelte'
   import Blog from '$lib/components/blog.svelte'
+  import Archivum from '$lib/components/archivum.svelte'
   import 'uno.css'
   import '../app.pcss'
   import PostCard from '$lib/components/post_card.svelte'
@@ -39,10 +42,16 @@
 <Header {path} />
 
 <Transition {path}>
-  {#if path.split('/')[1] == 'blog'}
+  {#if path == '/blog'}
     <Blog />
-  {:else if path.split('/')[1] == 'highlights'}
-    <Highlights />
+  {:else if path == '/hirek'}
+    <Hirek />
+  {:else if path == '/terkep'}
+    <Terkep />
+  {:else if path == '/adat'}
+    <Adat />
+  {:else if path == '/archivum'}
+    <Archivum />
   {:else}
     <!-- {path.split('/')[1]} -->
     <slot />

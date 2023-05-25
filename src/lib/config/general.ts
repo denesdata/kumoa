@@ -2,16 +2,12 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 
 export const theme: ThemeConfig = [
   {
-    name: 'dracula',
-    text: '🟦 Default'
+    name: 'winter',
+    text: '⚪ Világos'
   },
   {
     name: 'night',
-    text: '⚫ Dark'
-  },
-  {
-    name: 'winter',
-    text: '⚪ Light'
+    text: '⚫ Sötét'
   }
 ]
 
@@ -24,7 +20,7 @@ export const header: HeaderConfig = {
   nav: [
     {
       text: 'Hírek',
-      link: '/highlights'
+      link: '/hirek'
     },
     {
       text: 'Blog',
@@ -32,38 +28,30 @@ export const header: HeaderConfig = {
     },
     {
       text: 'Adatok',
-      link: '/modelling'
+      link: '/adat'
     },
     {
       text: 'Térképek',
-      link: '/explorables'
+      link: '/terkep'
     },
     {
-      text: 'About',
+      text: 'Archívum',
+      link: '/archivum'
+    },
+    {
+      text: 'Rólunk',
       children: [
         {
-          text: 'Project',
-          link: '/about/project'
+          text: 'Projekt',
+          link: '/rolunk/projekt'
         },
         {
-          text: 'Team',
-          link: '/about/team'
+          text: 'Csapat',
+          link: '/rolunk/csapat'
         },
         {
-          text: 'Prizes',
-          link: '/about/prizes'
-        },
-        {
-          text: 'Data',
-          link: '/about/data'
-        },
-        {
-          text: 'Publications',
-          link: '/about/publications'
-        },
-        {
-          text: 'Careers',
-          link: '/about/careers'
+          text: 'Publikációk',
+          link: '/rolunk/publikaciok'
         }
       ]
     }
@@ -80,7 +68,8 @@ export const footer: FooterConfig = {
       text: 'Sitemap',
       link: '/sitemap.xml'
     }
-  ]
+  ],
+  img: '/assets/logo/npat-logo.png'
 }
 
 export const date: DateConfig = {

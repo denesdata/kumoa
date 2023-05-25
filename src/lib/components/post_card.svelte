@@ -71,7 +71,7 @@
     }`}>
     <div class="flex flex-col gap-2">
       {#if post.image && !preview}
-        <figure
+        <!-- <figure
           class={`md:order-last rounded-box shadow-xl mb-4 ${
             post.type === 'article' ? 'flex-col gap-2 -mx-4 -mt-8 md:mt-0' : 'flex-col -mx-8'
           }`}>
@@ -81,7 +81,7 @@
             alt={post.image}
             {loading}
             {decoding} />
-        </figure>
+        </figure> -->
       {/if}
       <Status {post} {preview} />
       {#if post.title}

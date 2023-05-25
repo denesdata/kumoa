@@ -12,6 +12,9 @@
   class="footer footer-center bg-base-300 text-base-content shadow-inner p-8 {rounded
     ? 'rounded-box'
     : 'md:rounded-box'} {sticky ? 'sticky bottom-0 z-0 md:static' : ''} {className ?? ''}">
+  {#if footerConfig.img}
+    <img class="u-photo transition-shadow z-10 h-40" src={footerConfig.img} alt={site.title} />
+  {/if}
   <div class="prose">
     <p>
       {#if footerConfig.nav}

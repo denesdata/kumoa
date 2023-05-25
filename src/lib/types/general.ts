@@ -28,6 +28,7 @@ export type FooterConfig = {
     text: string
     link: string
   }[]
+  img?: string
   html?: string
   since?: string
 }
