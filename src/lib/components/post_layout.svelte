@@ -25,6 +25,7 @@
   // post
   let fm = { path, slug, toc, created, updated, published, summary, tags, flags, title, image, in_reply_to }
   let post = { type: typeOfPost(fm), ...fm }
+  console.log(path)
 </script>
 
 <Container {post}>
