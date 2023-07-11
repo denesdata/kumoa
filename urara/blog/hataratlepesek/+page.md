@@ -1,5 +1,5 @@
 ---
-title: 'Határátlépések'
+title: 'Hargita megye lakossága csökken, de a tanulói létszám gyarapodik'
 created: 2023-03-31
 tags: [blog, podcast]
 ---
